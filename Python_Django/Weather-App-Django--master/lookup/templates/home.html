@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+{% if zipcode %}
+	{{ zipcode }}
+{% endif %}
+
+
+
+<br/>
+
+{% if api %}
+	{% if api == "Error.." %} <!-- defined Error.. in viwe.py -->
+		There was an Error Please try again
+	{% else %}
+
+		<div class="jumbotron">
+		  <h1 class="display-4">{{ api.0.Category.Name }}</h1> <!-- Accessing dictionary within dictionary -->
+		  <p class="lead">{{ api.0.ReportingArea }} Air Quality: {{ api.0.AQI }}</p> <!-- Accessing dictionary -->
+
+		  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+		</div>
+	{% endif %}	
+
+{% endif %}
+
+{% endblock %}
+

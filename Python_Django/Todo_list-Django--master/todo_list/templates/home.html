@@ -1,0 +1,44 @@
+{% extends 'base.html'  %}
+
+{% block title %}
+todo_app
+{% endblock %}
+
+
+
+
+{% block content %}
+
+{% if messages %} <!--from view.py-->
+	{% for message in messages %}
+		<div class="alert alert-primary alert-dismissable" role="alert">
+			<button class="close" data-dismiss="alert"><small><sup>x</sup></small></button>
+  			{{ message }}
+		</div>
+	{% endfor %}
+{% endif %}
+
+<br/>
+
+{% if all_items %}
+<table class="table table-bordered">
+	
+		{% for things in all_items %} <!-- here all_items contains all the data from db which is defined in views.py-->
+			{% if things.completed %}
+				<tr class="table-secondary">
+				<td class="striker"> <a href="{% url 'edit' things.id %}">{{ things.item }}</a> </td> <!--here items/completed are db row/record/ name defined in models.py -->
+				<td><center> <a href="{% url 'uncross' things.id %}">Uncross</a> </center></td>
+				<td><center><a href="{% url 'delete' things.id %}"> Delete</a> </center></td>
+			    </tr>
+			{% else %}
+				<tr>
+				<td> <a href="{% url 'edit' things.id %}">{{ things.item }}</a> </td>  <!--here items/completed are db row/record/ name defined in models.py -->
+				<td><center> <a href="{% url 'cross_off' things.id %}">Cross Off</a> </center></td>
+				<td><center><a href="{% url 'delete' things.id %}"> Delete</a> </center></td>
+				</tr>
+			{% endif %}
+
+		{% endfor %}
+</table>
+{% endif %}
+{% endblock %}
