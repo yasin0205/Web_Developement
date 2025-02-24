@@ -18,10 +18,12 @@ This is a **Django-based** real estate listing web application that allows users
 
 ## Project Structure
 
+
+```
 real-estate-listings/
-│── manage.py                # Django project management script
-│── requirements.txt         # Project dependencies
-│── .gitignore               # Git ignored files
+├── manage.py                # Django project management script
+├── requirements.txt         # Project dependencies
+├── .gitignore               # Git ignored files
 │
 ├── accounts/                # User authentication
 │   ├── admin.py
@@ -30,23 +32,23 @@ real-estate-listings/
 │   ├── tests.py
 │   ├── urls.py
 │   ├── views.py
-│   ├── migrations/
-│   │   ├── __init__.py
+│   └── migrations/
+│       └── __init__.py
 │
 ├── btre/                    # Main Django project configuration
 │   ├── settings.py
 │   ├── urls.py
 │   ├── wsgi.py
-│   ├── static/              # Static files (CSS, JS, images)
-│   │   ├── css/
-│   │   │   ├── admin.css
-│   │   │   ├── style.css
-│   │   ├── js/
-│   │   │   ├── main.js
-│   │   │   ├── lightbox.min.js
-│   │   ├── img/
-│   │       ├── logo.png
-│   │       ├── showcase.jpg
+│   └── static/              # Static files (CSS, JS, images)
+│       ├── css/
+│       │   ├── admin.css
+│       │   ├── style.css
+│       ├── js/
+│       │   ├── main.js
+│       │   ├── lightbox.min.js
+│       ├── img/
+│           ├── logo.png
+│           ├── showcase.jpg
 │
 ├── contacts/                # Contact forms for inquiries
 │   ├── admin.py
@@ -54,9 +56,9 @@ real-estate-listings/
 │   ├── models.py
 │   ├── urls.py
 │   ├── views.py
-│   ├── migrations/
-│   │   ├── 0001_initial.py
-│   │   ├── __init__.py
+│   └── migrations/
+│       ├── 0001_initial.py
+│       └── __init__.py
 │
 ├── listings/                # Property listings
 │   ├── admin.py
@@ -66,26 +68,26 @@ real-estate-listings/
 │   ├── tests.py
 │   ├── urls.py
 │   ├── views.py
-│   ├── migrations/
-│   │   ├── 0001_initial.py
-│   │   ├── __init__.py
+│   └── migrations/
+│       ├── 0001_initial.py
+│       └── __init__.py
 │
 ├── pages/                   # Static pages (home, about)
 │   ├── admin.py
 │   ├── apps.py
 │   ├── urls.py
 │   ├── views.py
-│   ├── migrations/
-│   │   ├── __init__.py
+│   └── migrations/
+│       └── __init__.py
 │
 ├── realtors/                # Realtors module
 │   ├── admin.py
 │   ├── apps.py
 │   ├── models.py
 │   ├── views.py
-│   ├── migrations/
-│   │   ├── 0001_initial.py
-│   │   ├── __init__.py
+│   └── migrations/
+│       ├── 0001_initial.py
+│       └── __init__.py
 │
 ├── templates/               # HTML templates for the frontend
 │   ├── base.html            # Base template
@@ -101,7 +103,9 @@ real-estate-listings/
 │   │   ├── about.html
 │   │   ├── index.html
 │   ├── partials/
-│   │   ├── _alerts.html
-│   │   ├── _footer.html
-│   │   ├── _navbar.html
-│   │   ├── _topbar.html
+│       ├── _alerts.html
+│       ├── _footer.html
+│       ├── _navbar.html
+│       ├── _topbar.html
+```
+
